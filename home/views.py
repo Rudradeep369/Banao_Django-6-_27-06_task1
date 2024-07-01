@@ -99,3 +99,4 @@ def doctor_dashboard(request):
 def logout_view(request):
     logout(request)
     return redirect('index')
+

@@ -10,3 +10,4 @@ urlpatterns = [
     path('doctor-dashboard/', views.doctor_dashboard, name='doctor_dashboard'),  # Doctor dashboard URL
     path('signup/', views.signup, name='signup'),
 ]
+
