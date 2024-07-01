@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doctor Dashboard</title>
+    <!-- Bootstrap CSS - Replace with your Bootstrap CDN or local file -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/css/bootstrap.min.css">
+    <!-- Optional: Your custom CSS -->
+    <style>
+        /* Custom styles here */
+        .user-profile {
+            margin-bottom: 20px;
+        }
+        .user-profile img {
+            max-width: 150px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome to Your Dashboard, {{ user.username }}</h2>
+        <div class="user-profile">
+            <img src="{% if user.profile_picture %}{{ user.profile_picture.url }}{% else %}/path/to/default/profile-pic.png{% endif %}" alt="Profile Picture">
+            <p>Name: {{ user.get_full_name }}</p>
+            <p>Email: {{ user.email }}</p>
+            <!-- Add more details as needed -->
+        </div>
+        <p>Dashboard content here.</p>
+        <br>
+        <a href="{% url 'logout' %}" class="btn btn-danger">Logout</a>
+    </div>
+</body>
+</html>

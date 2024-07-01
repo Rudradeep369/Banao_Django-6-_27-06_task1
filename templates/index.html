@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <!-- Bootstrap CSS - Replace with your Bootstrap CDN or local file -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/css/bootstrap.min.css">
+    <!-- Optional: Your custom CSS -->
+    <style>
+        /* Custom styles here */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome to Our Application</h2>
+        <p>Please select your type:</p>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <a href="{% url 'patient_login' %}" class="btn btn-primary btn-lg btn-block">Patient</a>
+            </div>
+            <div class="col-md-6 mb-3">
+                <a href="{% url 'doctor_login' %}" class="btn btn-success btn-lg btn-block">Doctor</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
